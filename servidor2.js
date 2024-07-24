@@ -8,10 +8,6 @@ app.get('/mon', (request, response) => {
     response.render('monitoria')
 })
 
-app.post('/rota', (request, response) => {
-    response.render('monitoria', {resultado: ''})
-})
-
 app.post('/soma', (request, response) => {
     soma = parseFloat(request.body.n1) + parseFloat(request.body.n2)
     response.render('monitoria', {resultado: soma})
@@ -36,4 +32,5 @@ const PORT = 8080
 app.listen(PORT, () => {
     console.log("rodano =D")
 })
+
 
